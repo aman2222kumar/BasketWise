@@ -1,38 +1,238 @@
-.App {
-  text-align: center;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header_menu{
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1rem;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.header_menu .header_data{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding:0 1rem 0 1rem;
+}
+.header_menu .header_data li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.header_menu .header_data #cart_count{
+    position: relative;
+    border: 1px solid white;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+
+}
+.header_menu .header_data #cart_count span:first-child{
+ position: absolute;
+ bottom: -0.5rem;
+ left: -0.3rem;
+ color: rgb(255, 255, 255);
+ font-weight:bold;
+ display: inline-block;
+ font-size: large;
+}
+.header_menu .header_data li:first-child{
+    font-size: 1.5rem;
+    align-self: center;
+}
+
+.data_container{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+}
+.data_container .data_card img{
+  width: 300px;
+  height: 15rem;
+  object-fit: cover;
+}
+.data_container .data_card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    box-shadow: 2px 1px 5px 1px;
+   
+}
+.data_container .data_card .desc{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 20rem;
+}
+.data_container .data_card .tag{
+    background-color: rgb(203, 247, 247);
+    padding-left: 0.2rem;
+padding: 0.5rem 1rem 0.5rem 1rem;
+    width: max-content;
+    align-self: center;
+}
+
+.loading_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
+.link{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+
+}
+
+
+/* css for star*/
+.star-rating {
+    font-size: 1.5rem;
   }
+  
+  .stars-inner {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .star {
+    color: #f8ce0b; /* Filled star color */
+  }
+  
+  .stars-outer {
+    color: #ccc; /* Outline star color */
+  }
+
+  .checkout_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  .checkout_list .checkout_card{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    box-shadow: 2px 1px 5px 1px;
+  }
+  .checkout_list .checkout_card .img_desc{
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.3rem;
+  }
+  .checkout_list .checkout_card .img_desc img{
+    width: 180px;
+    height: 15rem;
+    object-fit: cover;
+  }
+  .checkout_list .checkout_card .img_desc  .description_container{
+    display: flex;
+    gap: 0.7rem;
+    flex-direction: column;
+  }
+  .checkout_list .checkout_card .img_desc  .description_container p:last-child{
+    font-weight: bolder;
+
+  }
+  .counter_container{
+    display: flex;
+    gap: 1rem;
+  }
+  .counter_container h5{
+    background-color: #f8ce0b;
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 5px;
+    
+  }
+  #checkout{
+    background-color: #f8ce0b;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  }
+
+  .btn1{
+    background-color: #f8ce0b;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  /* .checkout_container img {
+   
+} */
+.checkout_container .no_data{
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+@media screen and (max-width:1120px) {
+  .data_container{
+    display: grid;
+    grid-template-columns: 350px 350px;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.checkout_list .checkout_card .img_desc {
   display: flex;
+  gap: 0.4rem;
+  padding: 0.3rem;
   flex-direction: column;
   align-items: center;
+}
+.checkout_list .checkout_card .img_desc .description_container {
+  display: flex;
+  gap: 0.7rem;
+  flex-direction: column;
+  align-items: center;
+}
+.counter_container {
+  display: flex;
+  gap: 1rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width:780px) {
+  .data_container{
+    display: grid;
+    grid-template-columns: 350px;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.description_container .desc{overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+width: 12rem;
+}
 }
