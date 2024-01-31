@@ -13,7 +13,7 @@ function Checkout() {
   console.log("hello", counter);
 
   function handleChekout() {
-    alert("this is your total amount" + " :" + sum);
+    alert("this is your total amount" + " :" + sum.toFixed(3));
   }
   return (
     <>

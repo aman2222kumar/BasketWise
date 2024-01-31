@@ -236,3 +236,20 @@ text-overflow: ellipsis;
 width: 12rem;
 }
 }
+
+@media screen and (max-width:400px) {
+  .data_container{
+    display: grid;
+    grid-template-columns: 350px;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.description_container .desc{
+  overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+width: 10rem;
+}
+}
